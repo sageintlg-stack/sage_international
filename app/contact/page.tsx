@@ -78,8 +78,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="text-sm font-bold text-[#1A1A1A] mb-1">Email</h4>
-                    <a href="mailto:Enquiry@mysageintl.ae" className="text-[#1E7F5C] hover:underline text-sm font-medium">
-                      Enquiry@mysageintl.ae
+                    <a href="mailto:Info@sageintlg.com" className="text-[#1E7F5C] hover:underline text-sm font-medium">
+                      Info@sageintlg.com
                     </a>
                   </div>
                 </div>

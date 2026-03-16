@@ -1,16 +1,30 @@
 import Link from "next/link"
-import { MapPin, Mail, Phone } from "lucide-react"
+import { MapPin, Mail, Phone, Linkedin, MessageCircle } from "lucide-react"
 
 export function Footer() {
   return (
     <footer className="bg-[#0F172A] text-gray-300">
-      <div className="container mx-auto px-4 py-12 md:py-16">
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+      <div className="container mx-auto px-4 py-16 md:py-20">
+        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div>
-            <h3 className="mb-4 text-xl font-bold text-white">SAGE International</h3>
-            <p className="mb-4 text-sm leading-relaxed">
+            <h3 className="mb-4 text-2xl font-bold text-white tracking-wide">SAGE International</h3>
+            <p className="mb-6 text-sm leading-relaxed text-gray-400">
               Professional workforce solutions, HR advisory services, and document verification for organizations across multiple industries.
             </p>
+            <p className="text-xs font-medium text-[#1E7F5C] uppercase tracking-widest border-l-2 border-[#1E7F5C] pl-3 mb-6">
+              Providing workforce solutions across global industries since 2018.
+            </p>
+            <div className="flex items-center gap-4">
+              <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#1E7F5C] hover:text-white transition-all transform hover:-translate-y-1">
+                <Linkedin size={18} />
+              </a>
+              <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#25D366] hover:text-white transition-all transform hover:-translate-y-1">
+                <MessageCircle size={18} />
+              </a>
+              <a href="mailto:Info@sageintlg.com" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#4B3FA6] hover:text-white transition-all transform hover:-translate-y-1">
+                <Mail size={18} />
+              </a>
+            </div>
           </div>
           <div>
             <h4 className="mb-4 text-lg font-semibold text-white">Quick Links</h4>
@@ -87,8 +101,8 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 shrink-0 text-primary" />
-                <a href="mailto:Enquiry@mysageintl.ae" className="hover:text-white transition-colors">
-                  Enquiry@mysageintl.ae
+                <a href="mailto:Info@sageintlg.com" className="hover:text-white transition-colors">
+                  Info@sageintlg.com
                 </a>
               </li>
               <li className="flex items-center gap-3">
@@ -98,7 +112,7 @@ export function Footer() {
             </ul>
           </div>
         </div>
-        <div className="mt-12 border-t border-gray-800 pt-8 text-center text-sm">
+        <div className="mt-16 border-t border-gray-800/60 pt-8 text-center text-sm text-gray-500">
           <p>&copy; {new Date().getFullYear()} SAGE International General Trading L.L.C. All rights reserved.</p>
         </div>
       </div>

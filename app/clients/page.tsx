@@ -1,6 +1,7 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
+import { Footer } from '@/components/Footer'
 import { ArrowRight, Handshake, Globe, Shield, TrendingUp } from 'lucide-react'
 
 interface Client {
@@ -8,6 +9,7 @@ interface Client {
   name: string
   sector: string
   description: string
+  logoSrc?: string
 }
 
 const clients: Client[] = [
@@ -17,6 +19,7 @@ const clients: Client[] = [
     sector: 'Oilfield Services',
     description:
       'The world\'s leading provider of technology and services to the global energy industry. SAGE International has supported SLB with specialist recruitment and document verification for their Kuwait operations.',
+    logoSrc: '/images/clients/slb.png',
   },
   {
     abbr: 'KOC',
@@ -24,6 +27,7 @@ const clients: Client[] = [
     sector: 'National Oil Company',
     description:
       'Kuwait\'s flagship national oil company, responsible for the exploration and production of crude oil and natural gas. We have partnered with KOC to source skilled engineering and operational professionals.',
+    logoSrc: '/images/clients/koc.png',
   },
   {
     abbr: 'BH',
@@ -31,6 +35,7 @@ const clients: Client[] = [
     sector: 'Energy Technology',
     description:
       'A global energy technology company delivering solutions across the energy value chain. SAGE International has provided HR advisory and recruitment services for Baker Hughes Kuwait operations.',
+    logoSrc: '/images/clients/baker_hughes.png',
   },
   {
     abbr: 'AM',
@@ -38,6 +43,7 @@ const clients: Client[] = [
     sector: 'Oilfield Services',
     description:
       'A leading oilfield services company operating across the Middle East. We have supported Al Mansoori\'s workforce expansion in Kuwait with targeted recruitment and compliance services.',
+    logoSrc: '/images/clients/al_mansoori.png',
   },
 ]
 
@@ -101,9 +107,13 @@ export default function ClientsPage() {
                   key={client.abbr}
                   className="group flex items-center justify-center p-8 bg-white rounded-xl border border-[#E5E7EB] hover:border-[#1E7F5C] hover:shadow-md transition-all duration-300"
                 >
-                  <span className="text-3xl font-bold text-gray-300 group-hover:text-[#1E7F5C] transition-colors duration-300">
-                    {client.abbr}
-                  </span>
+                  {client.logoSrc ? (
+                    <Image src={client.logoSrc} alt={`${client.name} Logo`} width={160} height={80} className="object-contain max-h-16" />
+                  ) : (
+                    <span className="text-3xl font-bold text-gray-300 group-hover:text-[#1E7F5C] transition-colors duration-300">
+                      {client.abbr}
+                    </span>
+                  )}
                 </div>
               ))}
             </div>

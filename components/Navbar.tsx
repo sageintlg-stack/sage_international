@@ -4,26 +4,38 @@ import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import Image from 'next/image'
-import { Menu, X, ChevronDown, Users, Briefcase, FileCheck } from 'lucide-react'
+import { Menu, X, ChevronDown, Users, Briefcase, FileCheck, Building, TrendingUp } from 'lucide-react'
 
 const serviceItems = [
   {
-    label: 'Recruitment Services',
-    href: '/services#recruitment',
+    label: 'Manpower Outsourcing',
+    href: '/services#manpower-outsourcing',
     icon: Users,
-    description: 'Sourcing skilled professionals for energy and industrial sectors.',
+    description: 'Comprehensive manpower solutions to execute projects efficiently.',
   },
   {
-    label: 'HR Advisory',
-    href: '/services#hr-advisory',
-    icon: Briefcase,
-    description: 'Strategic HR consulting for workforce management.',
+    label: 'Contract Staffing',
+    href: '/services#contract-staffing',
+    icon: Building,
+    description: 'Flexible staffing connecting you with top-tier professionals.',
+  },
+  {
+    label: 'Management Consultant',
+    href: '/services#management-consulting',
+    icon: TrendingUp,
+    description: 'Expert advisory services to optimize processes and drive growth.',
   },
   {
     label: 'Document Verification',
     href: '/services#document-verification',
     icon: FileCheck,
-    description: 'Authenticity and compliance of professional documentation.',
+    description: 'Reliable document verification and attestations for operations.',
+  },
+  {
+    label: 'HR Advisory',
+    href: '/services#hr-advisory',
+    icon: Briefcase,
+    description: 'Strategic HR consulting for workforce management and policies.',
   },
 ]
 
@@ -41,6 +53,7 @@ export default function Navbar() {
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
   const pathname = usePathname()
   const dropdownRef = useRef<HTMLDivElement>(null)
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null)
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20)
@@ -48,11 +61,24 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  // Close mobile menu on route change
   useEffect(() => {
     setIsOpen(false)
     setMobileServicesOpen(false)
   }, [pathname])
 
+  const handleMouseEnter = () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current)
+    setServicesOpen(true)
+  }
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setServicesOpen(false)
+    }, 150) // 150ms delay prevents accidental closes
+  }
+
+  // Handle clicking outside to close
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
@@ -108,14 +134,14 @@ export default function Navbar() {
             <div
               ref={dropdownRef}
               className="relative"
-              onMouseEnter={() => setServicesOpen(true)}
-              onMouseLeave={() => setServicesOpen(false)}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
             >
               <button
                 onClick={() => setServicesOpen(!servicesOpen)}
                 aria-expanded={servicesOpen}
                 aria-haspopup="true"
-                className={`flex items-center gap-1 text-sm font-medium transition-colors duration-200 hover:text-[#1E7F5C] ${
+                className={`flex items-center gap-1 text-sm font-medium transition-colors duration-200 hover:text-[#1E7F5C] py-2 ${
                   isServicesActive ? 'text-[#1E7F5C]' : 'text-[#1A1A1A]'
                 }`}
               >
@@ -126,17 +152,19 @@ export default function Navbar() {
                 />
               </button>
 
-              {/* Dropdown Panel */}
+              {/* Dropdown Panel Outer Container (Acts as invisible bridge) */}
               <div
-                className={`absolute top-full left-1/2 -translate-x-1/2 mt-3 w-72 bg-white rounded-xl shadow-xl border border-[#E5E7EB] overflow-hidden transition-all duration-200 ${
+                className={`absolute top-[100%] left-1/2 -translate-x-1/2 pt-6 w-[22rem] transition-all duration-200 z-50 before:absolute before:-top-6 before:left-0 before:w-full before:h-8 before:bg-transparent ${
                   servicesOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none'
                 }`}
                 role="menu"
               >
-                {/* Arrow */}
-                <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-white border-l border-t border-[#E5E7EB] rotate-45" />
+                {/* Visual Dropdown Card */}
+                <div className="bg-white rounded-xl shadow-xl border border-[#E5E7EB] overflow-hidden relative">
+                  {/* Arrow */}
+                  <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-white border-l border-t border-[#E5E7EB] rotate-45 z-10" />
 
-                <div className="p-2">
+                  <div className="relative z-20 p-2">
                   {serviceItems.map((item) => {
                     const Icon = item.icon
                     return (
@@ -160,18 +188,19 @@ export default function Navbar() {
                   })}
                 </div>
 
-                <div className="border-t border-[#E5E7EB] px-4 py-3 bg-[#F7F9FB]">
-                  <Link
-                    href="/services"
-                    className="text-xs font-semibold text-[#1E7F5C] hover:text-[#166347] transition-colors duration-150"
-                  >
-                    View all services &rarr;
-                  </Link>
+                  <div className="border-t border-[#E5E7EB] px-4 py-3 bg-[#F7F9FB]">
+                    <Link
+                      href="/services"
+                      className="text-xs font-semibold text-[#1E7F5C] hover:text-[#166347] transition-colors duration-150 block text-center"
+                    >
+                      View all services &rarr;
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {navLinks.slice(1).map((link) => (
+            {navLinks.slice(2).map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
@@ -206,7 +235,7 @@ export default function Navbar() {
       {/* Mobile Navigation */}
       <div
         className={`lg:hidden overflow-hidden transition-all duration-300 ${
-          isOpen ? 'max-h-[480px] opacity-100' : 'max-h-0 opacity-0'
+          isOpen ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'
         } bg-white border-t border-[#E5E7EB]`}
       >
         <nav className="max-w-[1200px] mx-auto px-6 py-4 flex flex-col gap-1">
@@ -243,7 +272,7 @@ export default function Navbar() {
             </button>
             <div
               className={`overflow-hidden transition-all duration-300 ${
-                mobileServicesOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
+                mobileServicesOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'
               }`}
             >
               <div className="ml-3 mt-1 flex flex-col gap-1 border-l-2 border-[#E5E7EB] pl-3">
@@ -270,7 +299,7 @@ export default function Navbar() {
             </div>
           </div>
 
-          {navLinks.slice(1).map((link) => (
+          {navLinks.slice(2).map((link) => (
             <Link
               key={link.href}
               href={link.href}

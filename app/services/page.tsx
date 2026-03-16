@@ -177,7 +177,7 @@ export default function ServicesPage() {
       </section>
 
       {/* ── Call To Action ── */}
-      <section className="py-24 bg-gradient-to-br from-[#1E7F5C] to-[#4B3FA6] text-center">
+      <section className="py-24 bg-[#4B3FA6] text-center">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Optimize Your Workforce?
