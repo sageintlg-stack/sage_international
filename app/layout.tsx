@@ -67,6 +67,10 @@ export const metadata: Metadata = {
     site: '@SAGEIntlg',
     creator: '@SAGEIntlg',
   },
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-icon.png',
+  },
   other: {
     // GEO: UAE — Dubai
     'geo.region': 'AE-DU',
