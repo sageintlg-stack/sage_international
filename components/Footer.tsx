@@ -92,8 +92,6 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 shrink-0 text-primary" />
                 <span>
-                  DO3, BN Complex
-                  <br />
                   Al Muteena
                   <br />
                   Dubai, UAE

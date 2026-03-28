@@ -65,7 +65,6 @@ export default function ContactPage() {
                   <div>
                     <h4 className="text-sm font-bold text-[#1A1A1A] mb-1">Address</h4>
                     <p className="text-[#6B7280] text-sm leading-relaxed">
-                      DO3, BN Complex<br />
                       Al Muteena<br />
                       Dubai, UAE
                     </p>
@@ -209,6 +208,25 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+      
+      {/* ── Structured Data ── */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "mainEntity": {
+              "@type": "ContactPoint",
+              "telephone": "+971000000000",
+              "contactType": "customer service",
+              "email": "Info@sageintlg.com",
+              "areaServed": ["AE", "KW"],
+              "availableLanguage": ["English", "Arabic"]
+            }
+          })
+        }}
+      />
     </>
   )
 }

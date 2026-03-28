@@ -1,8 +1,28 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import Navbar from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
 import { ArrowRight, Handshake, Globe, Shield, TrendingUp } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'Our Clients | Trusted Partner for Leading Companies in UAE & Kuwait',
+  description: 'SAGE International is a trusted workforce and HR provider for leading corporations like SLB, KOC, Baker Hughes, and Al Mansoori across the Middle East.',
+  keywords: [
+    'Clients SAGE International', 'SLB Recruitment Partner', 'KOC Staffing Kuwait',
+    'Workforce Partner UAE', 'Trusted Manpower Agency Dubai', 'Baker Hughes HR Kuwait',
+    'Al Mansoori Workforce', 'Energy Company Staffing Partner'
+  ],
+  alternates: {
+    canonical: 'https://sageintlg.com/clients',
+  },
+  openGraph: {
+    title: 'Our Clients | Trusted Partner for Leading Companies',
+    description: 'Trusted by industry leaders SLB, KOC, Baker Hughes and Al Mansoori for reliable recruitment, HR solutions, and manpower deployment.',
+    url: 'https://sageintlg.com/clients',
+    images: [{ url: 'https://sageintlg.com/images/hero-bg.jpg', width: 1200, height: 630, alt: 'SAGE International Clients' }],
+  },
+}
 
 interface Client {
   abbr: string
