@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next'
 
-const baseUrl = 'https://sageintlg.com'
+const baseUrl = 'https://www.mysageintl.ae'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [

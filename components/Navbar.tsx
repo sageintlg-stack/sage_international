@@ -4,45 +4,46 @@ import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import Image from 'next/image'
-import { Menu, X, ChevronDown, Users, Briefcase, FileCheck, Building, TrendingUp } from 'lucide-react'
+import { Menu, X, ChevronDown, Globe2, Users, Briefcase, FileCheck, ShieldCheck } from 'lucide-react'
 
 const serviceItems = [
   {
-    label: 'Manpower Outsourcing',
-    href: '/services#manpower-outsourcing',
+    label: 'Overseas Workforce Recruitment',
+    href: '/services#overseas-recruitment',
+    icon: Globe2,
+    description: 'International sourcing and recruitment for regulated sector projects.',
+  },
+  {
+    label: 'Workforce Mobilisation & Deployment',
+    href: '/services#mobilisation-deployment',
     icon: Users,
-    description: 'Comprehensive manpower solutions to execute projects efficiently.',
+    description: 'Rapid, coordinated mobilisation from sourcing through to on-site deployment.',
   },
   {
-    label: 'Contract Staffing',
-    href: '/services#contract-staffing',
-    icon: Building,
-    description: 'Flexible staffing connecting you with top-tier professionals.',
-  },
-  {
-    label: 'Management Consultant',
-    href: '/services#management-consulting',
-    icon: TrendingUp,
-    description: 'Expert advisory services to optimize processes and drive growth.',
-  },
-  {
-    label: 'Document Verification',
-    href: '/services#document-verification',
+    label: 'Regulatory & Documentation Management',
+    href: '/services#regulatory-documentation',
     icon: FileCheck,
-    description: 'Reliable document verification and attestations for operations.',
+    description: 'Visas, permits, attestations, and regulatory compliance handling.',
   },
   {
-    label: 'HR Advisory',
-    href: '/services#hr-advisory',
+    label: 'Workforce Advisory Support',
+    href: '/services#workforce-advisory',
     icon: Briefcase,
-    description: 'Strategic HR consulting for workforce management and policies.',
+    description: 'Operational guidance on workforce structure and project planning.',
+  },
+  {
+    label: 'Documentation & Compliance Support',
+    href: '/services#compliance-support',
+    icon: ShieldCheck,
+    description: 'Credential verification, screening, and compliance management.',
   },
 ]
 
 const navLinks = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
-  { label: 'Clients', href: '/clients' },
+  { label: 'Experience', href: '/#project-experience' },
+  { label: 'Capability', href: '/#capability' },
   { label: 'Contact', href: '/contact' },
 ]
 
@@ -75,7 +76,7 @@ export default function Navbar() {
   const handleMouseLeave = () => {
     timeoutRef.current = setTimeout(() => {
       setServicesOpen(false)
-    }, 150) // 150ms delay prevents accidental closes
+    }, 150)
   }
 
   // Handle clicking outside to close
@@ -130,6 +131,14 @@ export default function Navbar() {
               About
             </Link>
 
+            {/* Experience link */}
+            <Link
+              href="/#project-experience"
+              className="text-sm font-medium transition-colors duration-200 hover:text-[#1E7F5C] text-[#1A1A1A]"
+            >
+              Experience
+            </Link>
+
             {/* Services Dropdown */}
             <div
               ref={dropdownRef}
@@ -152,9 +161,8 @@ export default function Navbar() {
                 />
               </button>
 
-              {/* Dropdown Panel Outer Container (Acts as invisible bridge) */}
               <div
-                className={`absolute top-[100%] left-1/2 -translate-x-1/2 pt-6 w-[22rem] transition-all duration-200 z-50 before:absolute before:-top-6 before:left-0 before:w-full before:h-8 before:bg-transparent ${
+                className={`absolute top-[100%] left-1/2 -translate-x-1/2 pt-6 w-[24rem] transition-all duration-200 z-50 before:absolute before:-top-6 before:left-0 before:w-full before:h-8 before:bg-transparent ${
                   servicesOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none'
                 }`}
                 role="menu"
@@ -200,17 +208,13 @@ export default function Navbar() {
               </div>
             </div>
 
-            {navLinks.slice(2).map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`text-sm font-medium transition-colors duration-200 hover:text-[#1E7F5C] ${
-                  pathname === link.href ? 'text-[#1E7F5C]' : 'text-[#1A1A1A]'
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {/* Capability link */}
+            <Link
+              href="/#capability"
+              className="text-sm font-medium transition-colors duration-200 hover:text-[#1E7F5C] text-[#1A1A1A]"
+            >
+              Capability
+            </Link>
 
             <Link
               href="/contact"
@@ -256,6 +260,13 @@ export default function Navbar() {
             About
           </Link>
 
+          <Link
+            href="/#project-experience"
+            className="text-sm font-medium py-3 px-3 rounded-lg transition-colors duration-200 hover:bg-[#F7F9FB] hover:text-[#1E7F5C] text-[#1A1A1A]"
+          >
+            Experience
+          </Link>
+
           {/* Mobile Services Accordion */}
           <div>
             <button
@@ -272,7 +283,7 @@ export default function Navbar() {
             </button>
             <div
               className={`overflow-hidden transition-all duration-300 ${
-                mobileServicesOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'
+                mobileServicesOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
               }`}
             >
               <div className="ml-3 mt-1 flex flex-col gap-1 border-l-2 border-[#E5E7EB] pl-3">
@@ -299,17 +310,12 @@ export default function Navbar() {
             </div>
           </div>
 
-          {navLinks.slice(2).map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`text-sm font-medium py-3 px-3 rounded-lg transition-colors duration-200 hover:bg-[#F7F9FB] hover:text-[#1E7F5C] ${
-                pathname === link.href ? 'text-[#1E7F5C] bg-[#F0FAF5]' : 'text-[#1A1A1A]'
-              }`}
-            >
-              {link.label}
-            </Link>
-          ))}
+          <Link
+            href="/#capability"
+            className="text-sm font-medium py-3 px-3 rounded-lg transition-colors duration-200 hover:bg-[#F7F9FB] hover:text-[#1E7F5C] text-[#1A1A1A]"
+          >
+            Capability
+          </Link>
 
           <Link
             href="/contact"

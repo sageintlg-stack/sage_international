@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export function FloatingWhatsAppButton() {
   // Replace with the actual WhatsApp number
-  const whatsappNumber = ""
+  const whatsappNumber = "971585855044"
   const message = "Hello, I would like to inquire about your services."
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`
 

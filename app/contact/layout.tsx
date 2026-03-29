@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Contact SAGE International | HR & Manpower Outsourcing — Dubai UAE & Kuwait',
-  description: 'Contact SAGE International for manpower outsourcing, contract staffing, HR advisory, and document verification in Dubai UAE and Kuwait. Email: Info@sageintlg.com.',
+  description: 'Contact SAGE International for manpower outsourcing, contract staffing, HR advisory, and document verification in Dubai UAE and Kuwait. Email: info@mysageintl.ae.',
   keywords: [
     'Contact SAGE International', 'HR Agency Dubai Contact', 'Recruitment Agency Kuwait Contact',
     'Manpower Agency Email UAE', 'HR Consulting Inquiry Dubai', 'Staffing Agency Contact UAE',
@@ -49,7 +49,7 @@ const contactSchema = {
       'name': 'SAGE International — Dubai Office',
       'parentOrganization': { '@id': 'https://sageintlg.com/#organization' },
       'telephone': '+971-XX-XXXXXXX',
-      'email': 'Info@sageintlg.com',
+      'email': 'info@mysageintl.ae',
       'url': 'https://sageintlg.com',
       'priceRange': '$$',
       'currenciesAccepted': 'AED',
@@ -86,7 +86,7 @@ const contactSchema = {
       'name': 'SAGE International — Kuwait Office',
       'parentOrganization': { '@id': 'https://sageintlg.com/#organization' },
       'telephone': '+965-XXXXXXXX',
-      'email': 'Info@sageintlg.com',
+      'email': 'info@mysageintl.ae',
       'url': 'https://sageintlg.com',
       'priceRange': '$$',
       'currenciesAccepted': 'KWD',

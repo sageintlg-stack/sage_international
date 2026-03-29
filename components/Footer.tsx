@@ -9,19 +9,19 @@ export function Footer() {
           <div>
             <h3 className="mb-4 text-2xl font-bold text-white tracking-wide">SAGE International</h3>
             <p className="mb-6 text-sm leading-relaxed text-gray-400">
-              Professional workforce solutions, HR advisory services, and document verification for organizations across multiple industries.
+              Overseas workforce recruitment and deployment for energy sector and government projects.
             </p>
             <p className="text-xs font-medium text-[#1E7F5C] uppercase tracking-widest border-l-2 border-[#1E7F5C] pl-3 mb-6">
-              Providing workforce solutions across global industries since 2018.
+              Workforce solutions for regulated industries since 2018.
             </p>
             <div className="flex items-center gap-4">
               <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#1E7F5C] hover:text-white transition-all transform hover:-translate-y-1">
                 <Linkedin size={18} />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#25D366] hover:text-white transition-all transform hover:-translate-y-1">
+              <a href="https://wa.me/971585855044" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#25D366] hover:text-white transition-all transform hover:-translate-y-1">
                 <MessageCircle size={18} />
               </a>
-              <a href="mailto:Info@sageintlg.com" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#4B3FA6] hover:text-white transition-all transform hover:-translate-y-1">
+              <a href="mailto:info@mysageintl.ae" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#4B3FA6] hover:text-white transition-all transform hover:-translate-y-1">
                 <Mail size={18} />
               </a>
             </div>
@@ -40,13 +40,18 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/#project-experience" className="hover:text-primary transition-colors">
+                  Experience
+                </Link>
+              </li>
+              <li>
                 <Link href="/services" className="hover:text-primary transition-colors">
                   Services
                 </Link>
               </li>
               <li>
-                <Link href="/industries" className="hover:text-primary transition-colors">
-                  Industries
+                <Link href="/#capability" className="hover:text-primary transition-colors">
+                  Capability
                 </Link>
               </li>
               <li>
@@ -60,34 +65,34 @@ export function Footer() {
             <h4 className="mb-4 text-lg font-semibold text-white">Our Services</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/services#manpower-outsourcing" className="hover:text-primary transition-colors">
-                  Manpower Outsourcing
+                <Link href="/services#overseas-recruitment" className="hover:text-primary transition-colors">
+                  Overseas Workforce Recruitment
                 </Link>
               </li>
               <li>
-                <Link href="/services#contract-staffing" className="hover:text-primary transition-colors">
-                  Contract Staffing
+                <Link href="/services#mobilisation-deployment" className="hover:text-primary transition-colors">
+                  Workforce Mobilisation &amp; Deployment
                 </Link>
               </li>
               <li>
-                <Link href="/services#management-consulting" className="hover:text-primary transition-colors">
-                  Management Consultant Services
+                <Link href="/services#regulatory-documentation" className="hover:text-primary transition-colors">
+                  Regulatory &amp; Documentation Management
                 </Link>
               </li>
               <li>
-                <Link href="/services#document-verification" className="hover:text-primary transition-colors">
-                  Document Verification & Attestations
+                <Link href="/services#workforce-advisory" className="hover:text-primary transition-colors">
+                  Workforce Advisory Support
                 </Link>
               </li>
               <li>
-                <Link href="/services#hr-advisory" className="hover:text-primary transition-colors">
-                  HR Advisory Services
+                <Link href="/services#compliance-support" className="hover:text-primary transition-colors">
+                  Documentation &amp; Compliance Support
                 </Link>
               </li>
             </ul>
           </div>
           <div>
-            <h4 className="mb-4 text-lg font-semibold text-white">Contact Us</h4>
+            <h4 className="mb-4 text-lg font-semibold text-white">Contact</h4>
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 shrink-0 text-primary" />
@@ -99,19 +104,33 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 shrink-0 text-primary" />
-                <a href="mailto:Info@sageintlg.com" className="hover:text-white transition-colors">
-                  Info@sageintlg.com
+                <a href="mailto:info@mysageintl.ae" className="hover:text-white transition-colors">
+                  info@mysageintl.ae
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-5 w-5 shrink-0 text-primary" />
-                <span>+971 00 000 0000</span>
+                <a href="tel:+971585855044" className="hover:text-white transition-colors">
+                  +971 58 585 5044
+                </a>
               </li>
+
             </ul>
           </div>
         </div>
-        <div className="mt-16 border-t border-gray-800/60 pt-8 text-center text-sm text-gray-500">
+        <div className="mt-16 border-t border-gray-800/60 pt-8 text-center text-sm text-gray-500 space-y-2">
           <p>&copy; {new Date().getFullYear()} SAGE International General Trading L.L.C. All rights reserved.</p>
+          <p>
+            Developed by{' '}
+            <a
+              href="https://www.ticodetech.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#1E7F5C] hover:text-[#2FAF7C] transition-colors font-medium"
+            >
+              Ticode Technologies
+            </a>
+          </p>
         </div>
       </div>
     </footer>

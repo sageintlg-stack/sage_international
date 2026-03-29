@@ -12,24 +12,23 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://sageintlg.com'),
+  metadataBase: new URL('https://www.mysageintl.ae'),
   title: {
-    default: 'SAGE International | #1 Manpower Outsourcing & HR Agency in UAE & Kuwait',
+    default: 'SAGE International | Workforce Solutions for Energy Sector Projects',
     template: '%s | SAGE International',
   },
   description:
-    'SAGE International is the leading manpower outsourcing, contract staffing, HR advisory, and document verification agency trusted by SLB, KOC, Baker Hughes in UAE and Kuwait.',
+    'SAGE International delivers overseas workforce recruitment, workforce mobilisation, and regulatory compliance for energy sector and government projects. UAE-based.',
   keywords: [
-    'Manpower Outsourcing UAE', 'HR Advisory Kuwait', 'Contract Staffing Dubai',
-    'Document Verification Middle East', 'Recruitment Agency UAE', 'Energy Sector Staffing',
-    'SAGE International General Trading', 'Best HR Company UAE', 'Workforce Solutions Kuwait',
-    'Labour Supply Company Dubai', 'Staff Outsourcing UAE', 'HR Consulting Dubai',
-    'Manpower Agency Kuwait', 'Staffing Company UAE', 'Executive Recruitment Middle East',
+    'Workforce Solutions UAE', 'Energy Sector Staffing', 'Overseas Workforce Recruitment',
+    'Workforce Mobilisation UAE', 'Oil Gas Workforce UAE', 'Government Project Staffing',
+    'SAGE International UAE', 'Industrial Workforce Provider', 'Regulatory Compliance Staffing',
+    'www.mysageintl.ae', 'Workforce Deployment UAE', 'Contract Workforce Middle East',
   ],
-  authors: [{ name: 'SAGE International General Trading L.L.C', url: 'https://sageintlg.com' }],
+  authors: [{ name: 'SAGE International General Trading L.L.C', url: 'https://www.mysageintl.ae' }],
   creator: 'SAGE International General Trading L.L.C',
   publisher: 'SAGE International General Trading L.L.C',
-  category: 'Human Resources & Workforce Solutions',
+  category: 'Workforce Solutions & Energy Sector Staffing',
   robots: {
     index: true,
     follow: true,
@@ -45,25 +44,25 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     alternateLocale: 'ar_AE',
-    url: 'https://sageintlg.com/',
-    title: 'SAGE International | #1 HR & Manpower Outsourcing Agency — UAE & Kuwait',
-    description: 'Trusted by SLB, KOC, Baker Hughes. Professional manpower outsourcing, contract staffing, HR advisory, and document verification in UAE & Kuwait.',
+    url: 'https://www.mysageintl.ae/',
+    title: 'SAGE International | Workforce Solutions for Energy Sector Projects',
+    description: 'Overseas workforce recruitment, mobilisation, and regulatory compliance for energy and government sector projects.',
     siteName: 'SAGE International',
     images: [
       {
-        url: 'https://sageintlg.com/images/hero-bg.jpg',
+        url: 'https://www.mysageintl.ae/images/hero-bg.jpg',
         width: 1200,
         height: 630,
-        alt: 'SAGE International — Professional Workforce Solutions UAE & Kuwait',
+        alt: 'SAGE International — Workforce Solutions for Energy Sector Projects',
         type: 'image/jpeg',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SAGE International | Top HR & Manpower Outsourcing Agency — UAE & Kuwait',
-    description: 'Expert manpower outsourcing, staffing, HR advisory, and document verification. Trusted by SLB, KOC, Baker Hughes.',
-    images: ['https://sageintlg.com/images/hero-bg.jpg'],
+    title: 'SAGE International | Workforce Solutions for Energy Sector Projects',
+    description: 'Overseas workforce recruitment, mobilisation, and regulatory compliance for energy and government projects.',
+    images: ['https://www.mysageintl.ae/images/hero-bg.jpg'],
     site: '@SAGEIntlg',
     creator: '@SAGEIntlg',
   },
@@ -100,24 +99,22 @@ const rootSchema = {
     // ── Organization (global) ──
     {
       '@type': ['Organization', 'Corporation'],
-      '@id': 'https://sageintlg.com/#organization',
+      '@id': 'https://www.mysageintl.ae/#organization',
       'name': 'SAGE International General Trading L.L.C',
       'alternateName': ['SAGE International', 'SAGE Intlg'],
-      'url': 'https://sageintlg.com',
+      'url': 'https://www.mysageintl.ae',
       'logo': {
         '@type': 'ImageObject',
-        'url': 'https://sageintlg.com/images/sage-logo.png',
+        'url': 'https://www.mysageintl.ae/images/sage-logo.png',
         'width': 400,
         'height': 120,
       },
-      'image': 'https://sageintlg.com/images/hero-bg.jpg',
-      'description': 'SAGE International is a leading manpower outsourcing, HR advisory, contract staffing, and document verification company trusted by global energy giants including SLB, KOC, and Baker Hughes across UAE and Kuwait.',
+      'image': 'https://www.mysageintl.ae/images/hero-bg.jpg',
+      'description': 'SAGE International delivers overseas workforce recruitment, workforce mobilisation, and regulatory compliance for energy sector and government projects. UAE-based.',
       'foundingDate': '2018-06-10',
       'numberOfEmployees': { '@type': 'QuantitativeValue', 'value': '500+' },
       'areaServed': [
         { '@type': 'Country', 'name': 'United Arab Emirates', '@id': 'https://www.wikidata.org/wiki/Q878' },
-        { '@type': 'Country', 'name': 'Kuwait', '@id': 'https://www.wikidata.org/wiki/Q817' },
-        { '@type': 'Country', 'name': 'Saudi Arabia' },
         { '@type': 'AdministrativeArea', 'name': 'Middle East' },
       ],
       'address': {
@@ -131,60 +128,44 @@ const rootSchema = {
       'contactPoint': [
         {
           '@type': 'ContactPoint',
-          'telephone': '+971-XX-XXXXXXX',
+          'telephone': '+971-58-585-5044',
           'contactType': 'customer service',
-          'email': 'Info@sageintlg.com',
-          'areaServed': ['AE', 'KW', 'SA'],
-          'availableLanguage': ['English', 'Arabic'],
-          'contactOption': 'TollFree',
-        },
-        {
-          '@type': 'ContactPoint',
-          'contactType': 'sales',
-          'email': 'Info@sageintlg.com',
-          'areaServed': ['AE', 'KW'],
+          'email': 'info@mysageintl.ae',
+          'areaServed': ['AE'],
           'availableLanguage': ['English', 'Arabic'],
         },
       ],
       'hasOfferCatalog': {
         '@type': 'OfferCatalog',
-        'name': 'HR & Workforce Services',
+        'name': 'Workforce Solutions',
         'itemListElement': [
-          { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Manpower Outsourcing', 'url': 'https://sageintlg.com/services#manpower-outsourcing' } },
-          { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Contract Staffing', 'url': 'https://sageintlg.com/services#contract-staffing' } },
-          { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Management Consulting', 'url': 'https://sageintlg.com/services#management-consulting' } },
-          { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Document Verification & Attestations', 'url': 'https://sageintlg.com/services#document-verification' } },
-          { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'HR Advisory Services', 'url': 'https://sageintlg.com/services#hr-advisory' } },
+          { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Overseas Workforce Recruitment', 'url': 'https://www.mysageintl.ae/services#overseas-recruitment' } },
+          { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Workforce Mobilisation & Deployment', 'url': 'https://www.mysageintl.ae/services#mobilisation-deployment' } },
+          { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Regulatory & Documentation Management', 'url': 'https://www.mysageintl.ae/services#regulatory-documentation' } },
+          { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Workforce Advisory Support', 'url': 'https://www.mysageintl.ae/services#workforce-advisory' } },
+          { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Documentation & Compliance Support', 'url': 'https://www.mysageintl.ae/services#compliance-support' } },
         ],
       },
       'knowsAbout': [
-        'Manpower Outsourcing', 'HR Advisory', 'Contract Staffing', 'Document Verification',
-        'Oil & Gas Staffing', 'Healthcare Recruitment', 'IT Staffing', 'Workforce Solutions',
-        'Labour Law Compliance UAE', 'MOL Attestation', 'Employee Outsourcing',
+        'Workforce Recruitment', 'Workforce Mobilisation', 'Regulatory Compliance UAE',
+        'Oil & Gas Workforce', 'Government Project Staffing', 'Document Verification',
+        'Energy Sector Workforce', 'Overseas Recruitment UAE',
       ],
-      'slogan': 'Connecting Talent. Empowering Business.',
+      'slogan': 'Workforce Solutions for Energy Sector Projects.',
       'sameAs': [
         'https://www.linkedin.com/company/sage-international',
       ],
-      'aggregateRating': {
-        '@type': 'AggregateRating',
-        'ratingValue': '4.9',
-        'reviewCount': '47',
-        'bestRating': '5',
-        'worstRating': '1',
-      },
     },
 
     // ── LocalBusiness — Dubai ──
     {
       '@type': 'LocalBusiness',
-      '@id': 'https://sageintlg.com/#localbusiness-dubai',
-      'name': 'SAGE International — Dubai Office',
-      'parentOrganization': { '@id': 'https://sageintlg.com/#organization' },
-      'url': 'https://sageintlg.com',
-      'telephone': '+971-XX-XXXXXXX',
-      'email': 'Info@sageintlg.com',
-      'servesCuisine': null,
+      '@id': 'https://www.mysageintl.ae/#localbusiness-dubai',
+      'name': 'SAGE International — Dubai',
+      'parentOrganization': { '@id': 'https://www.mysageintl.ae/#organization' },
+      'url': 'https://www.mysageintl.ae',
+      'telephone': '+971-58-585-5044',
+      'email': 'info@mysageintl.ae',
       'priceRange': '$$',
       'currenciesAccepted': 'AED',
       'openingHoursSpecification': [
@@ -208,58 +189,24 @@ const rootSchema = {
         'longitude': 55.2708,
       },
       'hasMap': 'https://maps.google.com/?q=SAGE+International+Dubai',
-      'image': 'https://sageintlg.com/images/hero-bg.jpg',
+      'image': 'https://www.mysageintl.ae/images/hero-bg.jpg',
       'sameAs': ['https://www.linkedin.com/company/sage-international'],
-    },
-
-    // ── LocalBusiness — Kuwait ──
-    {
-      '@type': 'LocalBusiness',
-      '@id': 'https://sageintlg.com/#localbusiness-kuwait',
-      'name': 'SAGE International — Kuwait Office',
-      'parentOrganization': { '@id': 'https://sageintlg.com/#organization' },
-      'url': 'https://sageintlg.com/contact',
-      'telephone': '+965-XXXXXXXX',
-      'email': 'Info@sageintlg.com',
-      'priceRange': '$$',
-      'currenciesAccepted': 'KWD',
-      'openingHoursSpecification': [
-        {
-          '@type': 'OpeningHoursSpecification',
-          'dayOfWeek': ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'],
-          'opens': '09:00',
-          'closes': '17:00',
-        },
-      ],
-      'address': {
-        '@type': 'PostalAddress',
-        'addressLocality': 'Kuwait City',
-        'addressRegion': 'Al Asimah',
-        'addressCountry': 'KW',
-      },
-      'geo': {
-        '@type': 'GeoCoordinates',
-        'latitude': 29.3759,
-        'longitude': 47.9774,
-      },
-      'hasMap': 'https://maps.google.com/?q=SAGE+International+Kuwait',
-      'image': 'https://sageintlg.com/images/hero-bg.jpg',
     },
 
     // ── WebSite ──
     {
       '@type': 'WebSite',
-      '@id': 'https://sageintlg.com/#website',
-      'url': 'https://sageintlg.com',
+      '@id': 'https://www.mysageintl.ae/#website',
+      'url': 'https://www.mysageintl.ae',
       'name': 'SAGE International',
-      'description': 'Leading Manpower Outsourcing & HR Solutions Company in UAE & Kuwait',
-      'publisher': { '@id': 'https://sageintlg.com/#organization' },
+      'description': 'Workforce Solutions for Energy Sector and Government Projects — UAE',
+      'publisher': { '@id': 'https://www.mysageintl.ae/#organization' },
       'inLanguage': ['en-US', 'ar'],
       'potentialAction': {
         '@type': 'SearchAction',
         'target': {
           '@type': 'EntryPoint',
-          'urlTemplate': 'https://sageintlg.com/?s={search_term_string}',
+          'urlTemplate': 'https://www.mysageintl.ae/?s={search_term_string}',
         },
         'query-input': 'required name=search_term_string',
       },
@@ -293,9 +240,9 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
 
         {/* Canonical & Alternate language */}
-        <link rel="alternate" hrefLang="en" href="https://sageintlg.com" />
-        <link rel="alternate" hrefLang="ar" href="https://sageintlg.com" />
-        <link rel="alternate" hrefLang="x-default" href="https://sageintlg.com" />
+        <link rel="alternate" hrefLang="en" href="https://www.mysageintl.ae" />
+        <link rel="alternate" hrefLang="ar" href="https://www.mysageintl.ae" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.mysageintl.ae" />
 
         {/* Root JSON-LD */}
         <script
@@ -303,7 +250,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(rootSchema) }}
         />
       </head>
-      <body className={`${inter.variable} font-sans antialiased flex flex-col min-h-screen`}>
+      <body className={`${inter.variable} font-sans antialiased flex flex-col min-h-screen`} suppressHydrationWarning>
         <Navbar />
         <main className="flex-grow pt-16 lg:pt-20">
           {children}

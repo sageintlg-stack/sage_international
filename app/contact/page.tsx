@@ -47,7 +47,7 @@ export default function ContactPage() {
       <section className="py-24 bg-[#F7F9FB]">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid lg:grid-cols-3 gap-12">
-            
+
             {/* ── Contact Info ── */}
             <div className="lg:col-span-1 flex flex-col gap-6">
               <div className="sage-card p-8 bg-white flex flex-col gap-8 h-full">
@@ -57,7 +57,7 @@ export default function ContactPage() {
                     Main Headquarters & Operations.
                   </p>
                 </div>
-                
+
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-xl bg-[#1E7F5C]/10 flex items-center justify-center shrink-0">
                     <MapPin className="text-[#1E7F5C]" size={24} />
@@ -77,8 +77,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="text-sm font-bold text-[#1A1A1A] mb-1">Email</h4>
-                    <a href="mailto:Info@sageintlg.com" className="text-[#1E7F5C] hover:underline text-sm font-medium">
-                      Info@sageintlg.com
+                    <a href="mailto:info@mysageintl.ae" className="text-[#1E7F5C] hover:underline text-sm font-medium">
+                      info@mysageintl.ae
                     </a>
                   </div>
                 </div>
@@ -208,7 +208,7 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-      
+
       {/* ── Structured Data ── */}
       <script
         type="application/ld+json"
@@ -220,7 +220,7 @@ export default function ContactPage() {
               "@type": "ContactPoint",
               "telephone": "+971000000000",
               "contactType": "customer service",
-              "email": "Info@sageintlg.com",
+              "email": "info@mysageintl.ae",
               "areaServed": ["AE", "KW"],
               "availableLanguage": ["English", "Arabic"]
             }

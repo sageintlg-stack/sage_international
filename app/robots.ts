@@ -31,8 +31,8 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: [
-      'https://sageintlg.com/sitemap.xml',
+      'https://www.mysageintl.ae/sitemap.xml',
     ],
-    host: 'https://sageintlg.com',
+    host: 'https://www.mysageintl.ae',
   }
 }
