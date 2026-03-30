@@ -91,29 +91,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── STATS BAR ── */}
-      <section className="py-14 bg-[#1E7F5C]">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <p className="text-4xl font-black text-white">2018</p>
-              <p className="text-white/80 text-sm font-medium mt-1">Year Founded</p>
-            </div>
-            <div>
-              <p className="text-4xl font-black text-white">500+</p>
-              <p className="text-white/80 text-sm font-medium mt-1">Professionals Deployed</p>
-            </div>
-            <div>
-              <p className="text-4xl font-black text-white">8+</p>
-              <p className="text-white/80 text-sm font-medium mt-1">Years Experience</p>
-            </div>
-            <div>
-              <p className="text-4xl font-black text-white">UAE</p>
-              <p className="text-white/80 text-sm font-medium mt-1">Primary Operations</p>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* ── Company Overview ── */}
       <section className="py-24 bg-white">
@@ -124,22 +102,24 @@ export default function AboutPage() {
               <h3 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-6 speakable">
                 Established in Dubai, 2018
               </h3>
-              <p className="text-[#6B7280] text-lg leading-relaxed mb-4">
-                SAGE International General Trading L.L.C was established on <strong>10 June 2018</strong> in Dubai, UAE. We provide overseas workforce recruitment and end-to-end deployment for energy sector and government project clients.
-              </p>
-              <p className="text-[#6B7280] text-base leading-relaxed mb-8">
-                From day one, we built our reputation executing workforce mandates for major energy operators — sourcing, mobilising, and deploying skilled professionals across regulated, multi-disciplinary projects with full documentation compliance.
-              </p>
-              <div className="grid grid-cols-2 gap-6">
-                <div className="border-l-4 border-[#1E7F5C] pl-4">
-                  <div className="text-3xl font-black text-[#1A1A1A]">500+</div>
-                  <div className="text-sm text-[#6B7280] font-medium mt-1">Professionals Deployed</div>
-                </div>
-                <div className="border-l-4 border-[#4B3FA6] pl-4">
-                  <div className="text-3xl font-black text-[#1A1A1A]">8+</div>
-                  <div className="text-sm text-[#6B7280] font-medium mt-1">Years in Operation</div>
-                </div>
-              </div>
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-start gap-3">
+                  <span className="text-[#1E7F5C] font-bold mt-1">▪</span>
+                  <p className="text-[#6B7280] text-lg">Established 2018 in Dubai, UAE</p>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-[#1E7F5C] font-bold mt-1">▪</span>
+                  <p className="text-[#6B7280] text-lg">Executing workforce mandates for energy and government sectors</p>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-[#1E7F5C] font-bold mt-1">▪</span>
+                  <p className="text-[#6B7280] text-lg">Sourcing, mobilising, and deploying multi-disciplinary professionals</p>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-[#1E7F5C] font-bold mt-1">▪</span>
+                  <p className="text-[#6B7280] text-lg">Full documentation and regulatory compliance managing</p>
+                </li>
+              </ul>
             </div>
             <div className="relative aspect-square md:aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
               <Image
@@ -155,35 +135,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── Mission & Vision ── */}
-      <section className="py-24 bg-[#F7F9FB]">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-sm font-bold text-[#1E7F5C] uppercase tracking-widest mb-3">Our Purpose</h2>
-            <h3 className="text-3xl md:text-4xl font-bold text-[#1A1A1A]">Mission &amp; Vision</h3>
-          </div>
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <div className="sage-card p-10 mt-0">
-              <div className="w-16 h-16 rounded-2xl bg-[#1E7F5C]/10 flex items-center justify-center mb-6">
-                <Target size={32} className="text-[#1E7F5C]" />
-              </div>
-              <h4 className="text-2xl font-bold text-[#1A1A1A] mb-4">Our Mission</h4>
-              <p className="text-[#6B7280] leading-relaxed text-base">
-                To source, mobilise, and deploy compliant workforce for energy sector and government projects — executing with precision, speed, and full regulatory adherence.
-              </p>
-            </div>
-            <div className="sage-card p-10 mt-0">
-              <div className="w-16 h-16 rounded-2xl bg-[#4B3FA6]/10 flex items-center justify-center mb-6">
-                <Eye size={32} className="text-[#4B3FA6]" />
-              </div>
-              <h4 className="text-2xl font-bold text-[#1A1A1A] mb-4">Our Vision</h4>
-              <p className="text-[#6B7280] leading-relaxed text-base">
-                To be the most reliable workforce partner for regulated-sector projects across the GCC — known for operational excellence, compliance, and consistent project delivery.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* ── Why SAGE ── */}
       <section className="py-24 bg-white">
@@ -251,8 +203,7 @@ export default function AboutPage() {
                 'Rapid mobilisation and on-site deployment',
                 'Regulatory documentation management',
                 'Visa and permit processing',
-                'Credential verification & background screening',
-                'End-to-end workforce coordination',
+                'Documentation & compliance support',
                 'Multi-discipline project staffing',
                 'Workforce advisory and planning support',
               ].map((point, i) => (

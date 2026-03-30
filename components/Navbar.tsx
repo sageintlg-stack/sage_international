@@ -35,7 +35,7 @@ const serviceItems = [
     label: 'Documentation & Compliance Support',
     href: '/services#compliance-support',
     icon: ShieldCheck,
-    description: 'Credential verification, screening, and compliance management.',
+    description: 'Documentation & compliance support and regulatory management.',
   },
 ]
 

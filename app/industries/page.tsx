@@ -226,7 +226,7 @@ export default function IndustriesPage() {
                         href="/contact"
                         className="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-[#1E7F5C] text-white font-semibold hover:bg-[#166347] hover:-translate-y-0.5 transition-all shadow-md"
                       >
-                        Enquire for {industry.title} <ArrowRight size={16} />
+                        Contact Us <ArrowRight size={16} />
                       </Link>
                     </div>
                   </div>

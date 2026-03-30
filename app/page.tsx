@@ -91,27 +91,27 @@ const projectExperience = [
   {
     project: 'SLB Field Operations Staffing',
     client: 'SLB (Schlumberger)',
-    description: 'Mobilisation and management of technical field personnel across energy projects.',
+    description: 'Mobilisation of technical field personnel for energy projects.',
   },
   {
     project: 'Baker Hughes Project Staffing',
     client: 'Baker Hughes',
-    description: 'End-to-end recruitment and deployment for oilfield services projects.',
+    description: 'Recruitment and deployment for oilfield services projects.',
   },
   {
     project: 'Al Mansoori Workforce Supply',
     client: 'Al Mansoori Petroleum Services',
-    description: 'Coordinated multi-discipline workforce supply for petro-services contracts.',
+    description: 'Multi-discipline workforce supply for petro-services contracts.',
   },
   {
     project: 'Government Project Manpower',
     client: 'UAE Federal Authority',
-    description: 'Mobilisation of regulated workforce for a government infrastructure programme.',
+    description: 'Regulated workforce mobilisation for government infrastructure.',
   },
   {
     project: 'Energy Sector Compliance Deployment',
-    client: 'Regional Energy Operator, UAE',
-    description: 'Full regulatory documentation and workforce mobilisation for energy asset projects.',
+    client: 'Regional Energy Operator',
+    description: 'Regulatory documentation & mobilisation for energy projects.',
   },
 ]
 
@@ -209,17 +209,12 @@ export default function HomePage() {
                 </div>
                 <span className="text-gray-200 text-sm font-medium">8+ Years Experience</span>
               </div>
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-full bg-[#4B3FA6] flex items-center justify-center">
-                  <Users size={16} className="text-white" />
-                </div>
-                <span className="text-gray-200 text-sm font-medium">500+ Professionals Deployed</span>
-              </div>
+
               <div className="flex items-center gap-2">
                 <div className="w-8 h-8 rounded-full bg-[#1E7F5C] flex items-center justify-center">
                   <Globe2 size={16} className="text-white" />
                 </div>
-                <span className="text-gray-200 text-sm font-medium">UAE Operations</span>
+                <span className="text-gray-200 text-sm font-medium">UAE-based operations</span>
               </div>
             </div>
           </div>
@@ -246,14 +241,13 @@ export default function HomePage() {
                 Workforce Solutions for Regulated Sector Projects
               </h3>
               <p className="text-[#6B7280] text-lg leading-relaxed mb-6">
-                SAGE International provides end-to-end workforce recruitment and deployment for energy sector and government clients. Operating from the UAE, we execute workforce mandates across regulated, multi-disciplinary projects.
+                SAGE International provides overseas workforce recruitment and deployment for energy sector and government clients. Operating from the UAE, we execute workforce mandates across regulated, multi-disciplinary projects.
               </p>
               <ul className="space-y-3 mb-8">
                 {[
                   'Overseas Workforce Recruitment',
                   'Workforce Deployment & Mobilisation',
                   'Regulatory & Documentation Management',
-                  'End-to-End Workforce Coordination',
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-3 text-[#1A1A1A] font-medium">
                     <UserCheck className="text-[#1E7F5C] shrink-0" size={20} />
@@ -265,7 +259,7 @@ export default function HomePage() {
                 href="/about"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-[#4B3FA6] text-white font-semibold hover:bg-[#3d3388] transition-colors shadow-md"
               >
-                Learn More <ArrowRight size={18} />
+                Contact Us <ArrowRight size={18} />
               </Link>
             </div>
           </div>
@@ -289,7 +283,7 @@ export default function HomePage() {
               >
                 <h4 className="text-lg font-bold text-[#1A1A1A] mb-1">{item.project}</h4>
                 <p className="text-xs font-semibold text-[#4B3FA6] uppercase tracking-wide mb-3">
-                  Client: {item.client}
+                  {item.client}
                 </p>
                 <p className="text-[#6B7280] text-sm leading-relaxed">{item.description}</p>
               </div>
@@ -326,7 +320,7 @@ export default function HomePage() {
             <ServiceCard
               icon={FileCheck}
               title="Regulatory & Documentation Management"
-              description="End-to-end handling of visas, permits, attestations, and regulatory filings."
+              description="Full handling of visas, permits, attestations, and regulatory filings."
               linkId="regulatory-documentation"
             />
             <ServiceCard
@@ -338,7 +332,7 @@ export default function HomePage() {
             <ServiceCard
               icon={ShieldCheck}
               title="Documentation & Compliance Support"
-              description="Credential verification, background screening, and full compliance management."
+              description="Documentation & compliance support across all regulatory and screening requirements."
               linkId="compliance-support"
             />
           </div>
@@ -347,8 +341,38 @@ export default function HomePage() {
               href="/services"
               className="inline-flex items-center gap-2 px-8 py-3 rounded-md border-2 border-[#1E7F5C] text-[#1E7F5C] font-bold hover:bg-[#1E7F5C] hover:text-white transition-all"
             >
-              View All Services <ArrowRight size={18} />
+              Contact Us <ArrowRight size={18} />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── PROJECT DELIVERY MODEL ── */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-sm font-bold text-[#1E7F5C] tracking-widest uppercase mb-3">Process</h2>
+              <h3 className="text-3xl md:text-4xl font-bold text-[#1A1A1A]">
+                Project Delivery Model
+              </h3>
+            </div>
+            <div className="bg-[#F7F9FB] rounded-2xl p-8 md:p-12 shadow-sm border border-[#E5E7EB]">
+              <ul className="space-y-2">
+                {[
+                  'Workforce sourcing',
+                  'Candidate screening',
+                  'Documentation & compliance support',
+                  'Mobilization & deployment',
+                  'On-site coordination',
+                ].map((point, i) => (
+                  <li key={i} className="flex items-center gap-4 py-3 border-b border-gray-200 last:border-0">
+                    <CheckCircle2 size={24} className="text-[#1E7F5C] shrink-0" />
+                    <span className="text-[#1A1A1A] text-lg font-bold">{point}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -369,7 +393,6 @@ export default function HomePage() {
                 'Rapid workforce mobilisation',
                 'Multi-location deployment',
                 'Regulatory compliance handling',
-                'End-to-end workforce coordination',
                 'International candidate sourcing',
                 'Documentation & attestation management',
                 'Workforce planning support',
@@ -503,7 +526,7 @@ export default function HomePage() {
               href="/contact"
               className="inline-flex items-center gap-2 px-8 py-3 w-full justify-center rounded-md bg-[#1E7F5C] text-white font-semibold hover:bg-[#166347] hover:-translate-y-0.5 transition-all shadow-md"
             >
-              Send an Inquiry <ArrowRight size={18} />
+              Contact Us <ArrowRight size={18} />
             </Link>
           </div>
         </div>

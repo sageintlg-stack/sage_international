@@ -36,13 +36,13 @@ const services = [
     title: 'Overseas Workforce Recruitment',
     icon: Users,
     iconColor: '#1E7F5C',
-    overview: 'End-to-end overseas recruitment for energy sector and government project roles. We source, screen, and deliver mobilisation-ready professionals from international talent markets.',
+    overview: 'Overseas recruitment for energy sector and government project roles. We source, screen, and deliver mobilisation-ready professionals from international talent markets.',
     bullets: [
-      'Job requisition scoping and role profiling',
-      'International candidate sourcing across key supply markets',
-      'Multi-stage screening, technical assessment, and reference checks',
-      'Credential verification before offer stage',
-      'Offer management and pre-deployment coordination',
+      'Role profiling & requisition',
+      'Global candidate sourcing',
+      'Technical screening',
+      'Pre-offer compliance',
+      'Deployment coordination',
     ],
   },
   {
@@ -52,11 +52,11 @@ const services = [
     iconColor: '#4B3FA6',
     overview: 'Rapid on-site deployment with full mobilisation coordination — from visa and travel to site induction. We manage the deployment process so your project is not delayed.',
     bullets: [
-      'Visa, work permit, and entry clearance processing',
-      'Pre-mobilisation medical and fitness coordination',
-      'Travel, accommodation, and logistics management',
-      'Site induction documentation and onboarding packs',
-      'Phased and short-notice mobilisation capability',
+      'Visa & permit processing',
+      'Medical coordination',
+      'Travel & logistics',
+      'Site induction management',
+      'Rapid mobilisation execution',
     ],
   },
   {
@@ -66,11 +66,11 @@ const services = [
     iconColor: '#1E7F5C',
     overview: 'Full management of regulatory documentation, attestations, and compliance filings required for deploying international workforce in regulated project environments.',
     bullets: [
-      'Academic degree and certificate authentication',
-      'Embassy attestation and MOFA legalization',
-      'Professional license and trade certificate verification',
-      'Criminal background checks and police clearance',
-      'Ongoing compliance tracking for deployed personnel',
+      'Degree authentication',
+      'MOFA legalization',
+      'License verification',
+      'Clearance processing',
+      'Compliance tracking',
     ],
   },
   {
@@ -80,11 +80,11 @@ const services = [
     iconColor: '#4B3FA6',
     overview: 'Operational advisory on workforce planning, role structuring, and deployment strategy for energy sector and government project environments.',
     bullets: [
-      'Workforce sizing and project manpower planning',
-      'Role definition and competency mapping',
-      'Deployment phasing and schedule alignment',
-      'Workforce risk assessment and contingency planning',
-      'On-call advisory throughout the project lifecycle',
+      'Manpower planning',
+      'Competency mapping',
+      'Schedule alignment',
+      'Contingency planning',
+      'Lifecycle advisory',
     ],
   },
   {
@@ -94,11 +94,11 @@ const services = [
     iconColor: '#1E7F5C',
     overview: 'Ongoing documentation and compliance management for deployed workforce — ensuring continuous regulatory adherence from mobilisation through demobilisation.',
     bullets: [
-      'Employment contract preparation and administration',
-      'Regulatory filing and authority notifications',
-      'Permit renewal tracking and extension management',
-      'Audit-ready documentation management',
-      'Demobilisation and exit compliance processing',
+      'Contract administration',
+      'Regulatory filings',
+      'Permit tracking',
+      'Audit management',
+      'Exit compliance',
     ],
   },
 ]
@@ -198,7 +198,7 @@ export default function ServicesPage() {
                           href="/contact"
                           className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-[#1E7F5C] text-white text-sm font-semibold hover:bg-[#166347] transition-colors"
                         >
-                          Enquire <ArrowRight size={16} />
+                          Contact Us <ArrowRight size={16} />
                         </Link>
                       </div>
                     </div>
