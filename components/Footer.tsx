@@ -40,7 +40,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/#project-experience" className="hover:text-primary transition-colors">
+                <Link href="/experience" className="hover:text-primary transition-colors">
                   Experience
                 </Link>
               </li>

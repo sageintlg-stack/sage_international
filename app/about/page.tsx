@@ -197,6 +197,29 @@ export default function AboutPage() {
               <h2 className="text-sm font-bold text-[#2FAF7C] tracking-widest uppercase mb-3">What We Deliver</h2>
               <h3 className="text-3xl md:text-4xl font-bold text-white">Operational Capability</h3>
             </div>
+
+            {/* ── CORE CAPABILITIES ── */}
+            <div className="mb-16">
+              <h4 className="text-xl font-bold text-white mb-6 border-b border-white/10 pb-4">
+                Core Capabilities
+              </h4>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 border border-white/10 rounded-2xl p-6 bg-white/5">
+                {[
+                  'Large-scale workforce mobilisation',
+                  'Multi-country recruitment operations',
+                  'Full regulatory compliance execution',
+                  'Workforce lifecycle management',
+                  'Rapid deployment capability',
+                  'Energy sector manpower solutions',
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-3">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#2FAF7C] shrink-0" />
+                    <span className="text-white text-sm font-medium">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
             <div className="grid sm:grid-cols-2 gap-4">
               {[
                 'Overseas workforce sourcing & recruitment',

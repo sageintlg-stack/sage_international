@@ -112,7 +112,7 @@ const rootSchema = {
       'image': 'https://www.mysageintl.ae/images/hero-bg.jpg',
       'description': 'SAGE International delivers overseas workforce recruitment, workforce mobilisation, and regulatory compliance for energy sector and government projects. UAE-based.',
       'foundingDate': '2018-06-10',
-      'numberOfEmployees': { '@type': 'QuantitativeValue', 'value': '500+' },
+
       'areaServed': [
         { '@type': 'Country', 'name': 'United Arab Emirates', '@id': 'https://www.wikidata.org/wiki/Q878' },
         { '@type': 'AdministrativeArea', 'name': 'Middle East' },

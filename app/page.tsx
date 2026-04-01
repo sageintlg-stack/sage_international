@@ -81,64 +81,7 @@ const homePageSchema = {
   ],
 }
 
-// ─── Project Experience Data ───────────────────────────────────────────────
-const projectExperience = [
-  {
-    project: 'KOC Workforce Deployment',
-    client: 'Kuwait Oil Company',
-    description: 'Deployment of skilled workforce for upstream operations.',
-  },
-  {
-    project: 'SLB Field Operations Staffing',
-    client: 'SLB (Schlumberger)',
-    description: 'Mobilisation of technical field personnel for energy projects.',
-  },
-  {
-    project: 'Baker Hughes Project Staffing',
-    client: 'Baker Hughes',
-    description: 'Recruitment and deployment for oilfield services projects.',
-  },
-  {
-    project: 'Al Mansoori Workforce Supply',
-    client: 'Al Mansoori Petroleum Services',
-    description: 'Multi-discipline workforce supply for petro-services contracts.',
-  },
-  {
-    project: 'Government Project Manpower',
-    client: 'UAE Federal Authority',
-    description: 'Regulated workforce mobilisation for government infrastructure.',
-  },
-  {
-    project: 'Energy Sector Compliance Deployment',
-    client: 'Regional Energy Operator',
-    description: 'Regulatory documentation & mobilisation for energy projects.',
-  },
-]
 
-// ─── Sub-components ────────────────────────────────────────────────────────
-
-function ServiceCard({
-  icon: Icon,
-  title,
-  description,
-  linkId,
-}: {
-  icon: React.ComponentType<{ size?: number; className?: string }>
-  title: string
-  description: string
-  linkId: string
-}) {
-  return (
-    <div className="sage-card p-8 flex flex-col h-full group hover:-translate-y-1.5 hover:shadow-xl transition-all duration-300 relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-32 h-32 bg-gray-50 rounded-bl-full -mr-8 -mt-8 -z-10 transition-transform group-hover:scale-110 duration-500" />
-      <div className="flex items-center justify-center w-14 h-14 rounded-full bg-[#1E7F5C]/10 mb-6 group-hover:bg-[#1E7F5C] transition-colors duration-300">
-        <Icon size={28} className="text-[#1E7F5C] group-hover:text-white transition-colors duration-300" />
-      </div>
-      <h3 className="text-xl font-bold text-[#1A1A1A] mb-2">{title}</h3>
-      <p className="text-[#6B7280] text-sm leading-relaxed flex-grow">{description}</p>
-    </div>
-  )
-}
 
 function ClientLogo({ name, abbr, src }: { name: string; abbr: string; src?: string }) {
   return (
@@ -221,131 +164,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── ABOUT SECTION ── */}
-      <section className="py-24 bg-[#F7F9FB]">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
-              <Image
-                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop"
-                alt="SAGE International workforce operations"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
-                loading="lazy"
-              />
-            </div>
-            <div>
-              <h2 className="text-sm font-bold text-[#1E7F5C] tracking-widest uppercase mb-3">About SAGE International</h2>
-              <h3 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-6">
-                Workforce Solutions for Regulated Sector Projects
-              </h3>
-              <p className="text-[#6B7280] text-lg leading-relaxed mb-6">
-                SAGE International provides overseas workforce recruitment and deployment for energy sector and government clients. Operating from the UAE, we execute workforce mandates across regulated, multi-disciplinary projects.
-              </p>
-              <ul className="space-y-3 mb-8">
-                {[
-                  'Overseas Workforce Recruitment',
-                  'Workforce Deployment & Mobilisation',
-                  'Regulatory & Documentation Management',
-                ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-[#1A1A1A] font-medium">
-                    <UserCheck className="text-[#1E7F5C] shrink-0" size={20} />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <Link
-                href="/about"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-[#4B3FA6] text-white font-semibold hover:bg-[#3d3388] transition-colors shadow-md"
-              >
-                Contact Us <ArrowRight size={18} />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* ── PROJECT EXPERIENCE ── */}
-      <section id="project-experience" className="py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-sm font-bold text-[#1E7F5C] tracking-widest uppercase mb-3">Track Record</h2>
-            <h3 className="text-3xl md:text-4xl font-bold text-[#1A1A1A]">
-              Project Experience
-            </h3>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projectExperience.map((item, i) => (
-              <div
-                key={i}
-                className="sage-card p-8 group hover:-translate-y-1.5 hover:shadow-xl transition-all duration-300 bg-white border-l-4 border-[#1E7F5C]"
-              >
-                <h4 className="text-lg font-bold text-[#1A1A1A] mb-1">{item.project}</h4>
-                <p className="text-xs font-semibold text-[#4B3FA6] uppercase tracking-wide mb-3">
-                  {item.client}
-                </p>
-                <p className="text-[#6B7280] text-sm leading-relaxed">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* ── SERVICES ── */}
-      <section className="py-24 bg-[#F7F9FB]">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-sm font-bold text-[#1E7F5C] tracking-widest uppercase mb-3">What We Do</h2>
-            <h3 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">
-              Our Services
-            </h3>
-            <p className="text-[#6B7280]">
-              Execution-focused workforce services for energy and government sector projects.
-            </p>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            <ServiceCard
-              icon={Globe2}
-              title="Overseas Workforce Recruitment"
-              description="Source and recruit skilled professionals internationally for energy and regulated sector projects."
-              linkId="overseas-recruitment"
-            />
-            <ServiceCard
-              icon={Users}
-              title="Workforce Mobilisation & Deployment"
-              description="Rapid, coordinated mobilisation of workforce from sourcing through to on-site deployment."
-              linkId="mobilisation-deployment"
-            />
-            <ServiceCard
-              icon={FileCheck}
-              title="Regulatory & Documentation Management"
-              description="Full handling of visas, permits, attestations, and regulatory filings."
-              linkId="regulatory-documentation"
-            />
-            <ServiceCard
-              icon={Briefcase}
-              title="Workforce Advisory Support"
-              description="Operational guidance on workforce structure, engagement models, and project planning."
-              linkId="workforce-advisory"
-            />
-            <ServiceCard
-              icon={ShieldCheck}
-              title="Documentation & Compliance Support"
-              description="Documentation & compliance support across all regulatory and screening requirements."
-              linkId="compliance-support"
-            />
-          </div>
-          <div className="text-center mt-12">
-            <Link
-              href="/services"
-              className="inline-flex items-center gap-2 px-8 py-3 rounded-md border-2 border-[#1E7F5C] text-[#1E7F5C] font-bold hover:bg-[#1E7F5C] hover:text-white transition-all"
-            >
-              Contact Us <ArrowRight size={18} />
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* ── PROJECT DELIVERY MODEL ── */}
       <section className="py-24 bg-white">
@@ -383,27 +203,58 @@ export default function HomePage() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
             <div className="mb-12">
-              <h2 className="text-sm font-bold text-[#2FAF7C] tracking-widest uppercase mb-3">What We Deliver</h2>
               <h3 className="text-3xl md:text-4xl font-bold text-white">
                 Capability
               </h3>
             </div>
-            <div className="grid sm:grid-cols-2 gap-4">
-              {[
-                'Rapid workforce mobilisation',
-                'Multi-location deployment',
-                'Regulatory compliance handling',
-                'International candidate sourcing',
-                'Documentation & attestation management',
-                'Workforce planning support',
-                'Sector-specific recruitment expertise',
-              ].map((point, i) => (
-                <div key={i} className="flex items-start gap-3 py-3 border-b border-white/10">
-                  <CheckCircle2 size={18} className="text-[#1E7F5C] shrink-0 mt-0.5" />
-                  <span className="text-gray-300 text-sm font-medium">{point}</span>
-                </div>
-              ))}
+
+            {/* ── CORE CAPABILITIES ── */}
+            <div className="mb-16">
+              <h4 className="text-xl font-bold text-white mb-6 border-b border-white/10 pb-4">
+                Core Capabilities
+              </h4>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 border border-white/10 rounded-2xl p-6 bg-white/5">
+                {[
+                  'Large-scale workforce mobilisation',
+                  'Multi-country recruitment operations',
+                  'Full regulatory compliance execution',
+                  'Workforce lifecycle management',
+                  'Rapid deployment capability',
+                  'Energy sector manpower solutions',
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-3">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#2FAF7C] shrink-0" />
+                    <span className="text-white text-sm font-medium">{item}</span>
+                  </div>
+                ))}
+              </div>
             </div>
+
+            {/* ── EXECUTION CAPABILITIES ── */}
+            <div>
+              <h4 className="text-xl font-bold text-white mb-6 border-b border-white/10 pb-4">
+                Execution Capabilities
+              </h4>
+              <div className="grid sm:grid-cols-2 gap-y-6 gap-x-4 border border-white/10 rounded-2xl p-8 bg-white/5 shadow-inner">
+                {[
+                  { title: 'Rapid workforce mobilisation', icon: Zap },
+                  { title: 'Multi-location deployment', icon: MapPin },
+                  { title: 'Regulatory compliance handling', icon: ShieldCheck },
+                  { title: 'International candidate sourcing', icon: Globe2 },
+                  { title: 'Documentation & compliance support', icon: FileCheck },
+                  { title: 'Workforce planning support', icon: Briefcase },
+                  { title: 'Sector-specific recruitment expertise', icon: Building2 },
+                ].map((item, i, arr) => (
+                  <div key={i} className={`flex items-center gap-4 ${i === arr.length - 1 ? 'sm:col-span-2 sm:max-w-sm sm:mx-auto w-full' : ''}`}>
+                    <div className="w-10 h-10 rounded-full bg-[#2FAF7C]/10 flex items-center justify-center shrink-0 border border-[#2FAF7C]/20 shadow-sm">
+                      <item.icon size={18} className="text-[#2FAF7C]" />
+                    </div>
+                    <span className="text-white text-[15px] font-medium leading-snug">{item.title}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -453,27 +304,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── CTA BANNER ── */}
-      <section className="py-24 bg-[#4B3FA6] relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10" />
-        <div className="container mx-auto px-4 relative z-10 text-center">
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-            Need Workforce for Your Next Project?
-          </h2>
-          <p className="text-white/85 text-lg mb-10 max-w-2xl mx-auto">
-            SAGE International delivers compliant, mobilisation-ready workforce for energy and government sector projects.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex justify-center items-center px-10 py-4 rounded-md bg-[#1E7F5C] text-white font-bold text-lg hover:bg-[#166347] hover:scale-105 hover:shadow-2xl transition-all duration-300 shadow-xl"
-          >
-            Contact Us
-          </Link>
-        </div>
-      </section>
-
       {/* ── CONTACT PREVIEW ── */}
-      <section className="py-24 bg-[#F7F9FB] border-t border-gray-100">
+      <section className="py-24 bg-white border-t border-[#E5E7EB]">
         <div className="container mx-auto px-4 text-center max-w-3xl">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#1E7F5C]/10 mb-6">
             <ClipboardList className="text-[#1E7F5C]" size={32} />

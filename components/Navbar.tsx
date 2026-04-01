@@ -8,6 +8,12 @@ import { Menu, X, ChevronDown, Globe2, Users, Briefcase, FileCheck, ShieldCheck 
 
 const serviceItems = [
   {
+    label: 'Services Overview',
+    href: '/services',
+    icon: Briefcase,
+    description: 'A complete overview of our workforce solutions.',
+  },
+  {
     label: 'Overseas Workforce Recruitment',
     href: '/services#overseas-recruitment',
     icon: Globe2,
@@ -42,7 +48,7 @@ const serviceItems = [
 const navLinks = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
-  { label: 'Experience', href: '/#project-experience' },
+  { label: 'Experience', href: '/experience' },
   { label: 'Capability', href: '/#capability' },
   { label: 'Contact', href: '/contact' },
 ]
@@ -131,10 +137,11 @@ export default function Navbar() {
               About
             </Link>
 
-            {/* Experience link */}
             <Link
-              href="/#project-experience"
-              className="text-sm font-medium transition-colors duration-200 hover:text-[#1E7F5C] text-[#1A1A1A]"
+              href="/experience"
+              className={`text-sm font-medium transition-colors duration-200 hover:text-[#1E7F5C] ${
+                pathname === '/experience' ? 'text-[#1E7F5C]' : 'text-[#1A1A1A]'
+              }`}
             >
               Experience
             </Link>
@@ -198,10 +205,10 @@ export default function Navbar() {
 
                   <div className="border-t border-[#E5E7EB] px-4 py-3 bg-[#F7F9FB]">
                     <Link
-                      href="/services"
-                      className="text-xs font-semibold text-[#1E7F5C] hover:text-[#166347] transition-colors duration-150 block text-center"
+                      href="/contact"
+                      className="text-sm font-semibold text-[#1E7F5C] hover:text-[#166347] flex items-center gap-1"
                     >
-                      View all services &rarr;
+                      Contact Us &rarr;
                     </Link>
                   </div>
                 </div>
@@ -261,8 +268,10 @@ export default function Navbar() {
           </Link>
 
           <Link
-            href="/#project-experience"
-            className="text-sm font-medium py-3 px-3 rounded-lg transition-colors duration-200 hover:bg-[#F7F9FB] hover:text-[#1E7F5C] text-[#1A1A1A]"
+            href="/experience"
+            className={`text-sm font-medium py-3 px-3 rounded-lg transition-colors duration-200 hover:bg-[#F7F9FB] hover:text-[#1E7F5C] ${
+              pathname === '/experience' ? 'text-[#1E7F5C] bg-[#F0FAF5]' : 'text-[#1A1A1A]'
+            }`}
           >
             Experience
           </Link>
@@ -300,11 +309,8 @@ export default function Navbar() {
                     </Link>
                   )
                 })}
-                <Link
-                  href="/services"
-                  className="text-xs font-semibold text-[#1E7F5C] py-2 px-2 hover:underline"
-                >
-                  View all services
+                <Link href="/contact" className="flex items-center text-[#1E7F5C] font-semibold text-sm pl-4 p-2 bg-white/50 rounded-md">
+                  Contact Us
                 </Link>
               </div>
             </div>
